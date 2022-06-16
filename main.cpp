@@ -1,5 +1,10 @@
 #include <stdio.h>
 #include <windows.h>
+#include <windows.h>
+#include <Sensapi.h>
+#include <ShlDisp.h>
+#pragma comment(lib, "Sensapi.lib")
+
 
 // アクセス権の定数
 #define OPEN_PROCESS_TOKEN      (TOKEN_ADJUST_PRIVILEGES|TOKEN_QUERY)
@@ -52,6 +57,7 @@ int main(void)
         case 2:     uFlag = EWX_POWEROFF;   break;
         case 3:     uFlag = EWX_REBOOT;     break;
         case 4:     uFlag = EWX_SHUTDOWN;   break;
+        case 5:
         default:    uMenu = 0;              break;
         }
     } while (uMenu == 0);
