@@ -11,11 +11,11 @@ int main()
     DWORD kindofNetwork;
     while(1)
     { 
-   
+
 
     oldIsConnected = isConnected;
     isConnected = IsNetworkAlive(&kindofNetwork);
-    
+
 
     if (isConnected == TRUE) {
         if (kindofNetwork == NETWORK_ALIVE_LAN) {
@@ -29,7 +29,7 @@ int main()
         printf("ネットワーク接続はされていません。\n");
     }
 
-
+    
     }
    /* ShellExecute(NULL, "open", "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Undertale\\UNDERTALE.exe", NULL, NULL, SW_SHOWNA);
     ShellExecute(NULL, "open", "C:\\Program Files (x86)\\Steam\\steamapps\\common\\DELTARUNEdemo\\DELTARUNE.exe", NULL, NULL, SW_SHOWNA);*/
